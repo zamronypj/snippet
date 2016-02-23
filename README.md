@@ -1,11 +1,10 @@
 # snippet
-Code snippet sharing web application
 
-This is a code snippet web application written in PHP usng Laravel 5.2. It is inspired by <a href="http://pastebin.com">http://pastebin.com</a>
+This is a code snippet sharing web application written in PHP using Laravel 5.2. It is inspired by <a href="http://pastebin.com">http://pastebin.com</a>
 
 ##Installation
 <ul>
- <li>Create a virtual host on your web server then point public directory to virtual host document root.</li>
+ <li>Create a virtual host on your web server then point `public` directory as Document Root.</li>
  <li>From shell run `php artisan app:key` to generate application key (see APP_KEY in .env file)</li>
  <li>Create a MySQL database and user that has priviledge to basic CRUD, and create table.</li>
  <li>Edit .env file and change DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD according to your database configuration.</li>
@@ -17,11 +16,13 @@ This is a code snippet web application written in PHP usng Laravel 5.2. It is in
  
 ##Depedency
 This application use :
-Laravel 5.2 (<a href="http://laravel.com">http://laravel.com</a>)
-Bootstrap 3.3.6 (<a href="http://getbootstrap.org">http://getbootstrap.org</a>)
-Highlight.js (<a href="http://highlightjs.org">http://highlightjs.org</a>)
+<ul>
+<li>Laravel 5.2 (<a href="http://laravel.com">http://laravel.com</a>)</li>
+<li>Bootstrap 3.3.6 (<a href="http://getbootstrap.org">http://getbootstrap.org</a>)</li>
+<li>Highlight.js (<a href="http://highlightjs.org">http://highlightjs.org</a>)</li>
+</ul>
 
-That's it
+That's it.
 
 Zamrony P. Juhara
 <a href="mailto:zamronypj@yahoo.com">Send me email</a> or Tweet me at <a href="http://twitter.com/zpjuhara">@zpjuhara</a>
