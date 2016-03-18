@@ -1,5 +1,5 @@
 @extends('app')
-@section('title', 'Snippet '.$snippet->title)
+@section('title', 'Snippet')
 
 @section('head')
   @if(!Auth::check())
@@ -27,8 +27,8 @@
         @else
            @include('login_form')
         @endif
-      </ul>
-      @include('search_form')
+     </ul>
+     @include('search_form')     
 
     </div><!--/.nav-collapse -->
   </div>
@@ -36,15 +36,22 @@
 @endsection
 
 @section('content')
-<div class="container">
- <div class="row">
-    <div class="col-12">
-        <h1>{{ $snippet->title }}</h1>
-        <span>Created {{ $snippet->created_at->diffForHumans() }}<?php echo ($snippet->username) ? ' by '.$snippet->username : '' ; ?></span>
-        <pre>
-            <code>{{ $snippet->code }}</code>
-        </pre>
-    </div>
- </div>    
+<div class="container"> 
+    <div class="row">
+      <div class="col-12">
+                <h2>Search Result</h2>
+                @if(isset($snippets) && count($snippets))
+                <ul>
+                    @foreach($snippets as $snippet)
+                    <li><h5><a href="{{ action('ViewSnippetController@index', ['hash'=>$snippet->hash]) }}">{{ $snippet->title }}</a></h5><span>Created {{ $snippet->created_at->diffForHumans() }}<?php echo ($snippet->username) ? ' by '.$snippet->username : '' ; ?></span></li>
+                    @endforeach
+                </ul>
+                @else
+                <div class="alert alert-info" role="alert">
+                    Oops, It seems we do not have what you are looking for.
+                </div>
+                @endif
+      </div>
+    </div>      
 </div>
 @endsection

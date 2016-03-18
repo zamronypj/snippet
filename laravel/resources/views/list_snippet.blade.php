@@ -27,15 +27,8 @@
            @include('login_form')
         @endif
      </ul>
-     
-     <form class="navbar-form">
-        <div class="form-group" style="display:inline;">
-          <div class="input-group" style="display:table;">
-            <input class="form-control" name="search" placeholder="Search snippet" autocomplete="off" autofocus="autofocus" type="text">
-            <span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"></span></span>
-          </div>
-        </div>
-      </form>
+        
+     @include('search_form')     
 
     </div><!--/.nav-collapse -->
   </div>
@@ -50,7 +43,7 @@
                 @if(isset($snippets) && count($snippets))
                 <ul>
                     @foreach($snippets as $snippet)
-                    <li><a href="{{ action('ViewSnippetController@index', ['hash'=>$snippet->hash]) }}">{{ $snippet->title }}</a></li>
+                    <li><h5><a href="{{ action('ViewSnippetController@index', ['hash'=>$snippet->hash]) }}">{{ $snippet->title }}</a></h5><span>Created {{ $snippet->created_at->diffForHumans() }}<?php echo ($snippet->username) ? ' by '.$snippet->username : '' ; ?></span></li>
                     @endforeach
                 </ul>
                 @endif

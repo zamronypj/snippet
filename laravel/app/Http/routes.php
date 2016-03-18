@@ -29,6 +29,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('/new', 'HomeController@addSnippet');
   Route::get('/mysnippet', 'MySnippetController@index');
   Route::get('s/{hash}', 'ViewSnippetController@index');
+  Route::get('/search', 'SearchController@search');
   
   Route::get('/login', 'Auth\AuthController@getLogin');    
   Route::post('/login', 'Auth\AuthController@postLogin');    

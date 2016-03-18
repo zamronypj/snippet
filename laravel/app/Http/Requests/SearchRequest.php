@@ -1,20 +1,19 @@
 <?php
-
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
 /**
- * ViewSnippetRequest
+ * Search request yang diinject ke 
+ * controller SearcController
  *
- * @author Administrator
+ * @author Zamrony P. Juhara
  */
-class SubmitSnippetRequest extends Request
+class SearchRequest extends Request
 {
-
     /**
      * Tentukan apakah user boleh mengakses.
-     * kita kembalikan nilai true karena HomeController 
+     * kita kembalikan nilai true karena ImageController 
      * boleh diakses publik
      * 
      * @return bool
@@ -32,10 +31,7 @@ class SubmitSnippetRequest extends Request
     public function rules()
     {
         return [
-            'snippet' => 'required|string',
-            'title' => 'string',
-            'syntax' => 'integer',
-            'exposure' => 'string',
+            'keywords' => 'required|string'
         ];
     }
 }

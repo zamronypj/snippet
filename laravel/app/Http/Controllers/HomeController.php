@@ -38,6 +38,7 @@ class HomeController extends Controller
         $snippet->code = $request->get('snippet');
         $snippet->hash = $snippet->generateRandomString(6);
         $snippet->syntax_id = $request->get('syntax', 1);
+        $snippet->exposure = $request->get('exposure', 1);
         $snippet->save();
         return $snippet;
     }

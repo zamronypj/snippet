@@ -28,7 +28,7 @@ class ViewSnippetRequest extends Request
 
     /**
      * Tentukan apakah user boleh mengakses.
-     * kita kembalikan nilai true karena ImageController 
+     * kita kembalikan nilai true karena ViewSnippetController 
      * boleh diakses publik
      * 
      * @return bool

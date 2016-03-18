@@ -26,15 +26,7 @@
            @include('login_form')
         @endif
       </ul>
-     
-     <form class="navbar-form">
-        <div class="form-group" style="display:inline;">
-          <div class="input-group" style="display:table;">
-            <input class="form-control" name="search" placeholder="Search snippet" autocomplete="off" autofocus="autofocus" type="text">
-            <span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"></span></span>
-          </div>
-        </div>
-      </form>
+      @include('search_form')
 
     </div><!--/.nav-collapse -->
   </div>
@@ -70,6 +62,13 @@
                                   @foreach($syntaxes as $syntax)
                                     <option value="{{ $syntax->id }}">{{ $syntax->syntax }}</option>
                                   @endforeach                                                     
+                                </select>                              
+                              </div>
+                             <div class="form-group">
+                                <label for="exposure">Exposure:</label>
+                                <select class="form-control" name="exposure" id="exposure">
+                                    <option value="public">Public</option>
+                                    <option value="hidden">Hidden</option>
                                 </select>                              
                               </div>
                             </div>
