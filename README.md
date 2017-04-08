@@ -2,7 +2,8 @@
 
 This is a code snippet sharing web application written in PHP using Laravel 5.2. It is inspired by <a href="http://pastebin.com">http://pastebin.com</a>
 
-##Installation
+Installation
+------------
 
 <ul>
  <li>Clone this repository</li>
@@ -16,11 +17,13 @@ This is a code snippet sharing web application written in PHP using Laravel 5.2.
  <li>From shell run `composer dumpautoload` to generate autoload file.</li>
 </ul>
 
-##Features
+Features
+--------
 
  Users are able to paste their code snippet and will receive short URL that point to their code snippet.
 
-##Dependency
+Dependency
+----------
 
 This application use :
 <ul>
